@@ -44,9 +44,9 @@ jobs:
 
       - name: Bump config
         run: |
-          tar -c -C openwrtv21.02rc1-r4s/.github/workflows . | tar -x
+          tar -c -C openwrt/.github/workflows . | tar -x
           ls ./
-          rm -rf openwrtv21.02rc1-r4s/.github/workflows
+          rm -rf openwrt/.github/workflows
       - name: Initialization environment
         env:
           DEBIAN_FRONTEND: noninteractive
