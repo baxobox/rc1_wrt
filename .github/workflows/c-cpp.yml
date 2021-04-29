@@ -3,8 +3,8 @@ name: Build 21.02rc1 for r4s
 on:
   push:
     branches: [ 21.02rc1 ]
-  pull_request:
-    branches: [ 21.02rc1 ]
+  #pull_request:
+  #  branches: [ 21.02rc1 ]
 
 env:
   FEEDS_CONF: feeds.conf.default
