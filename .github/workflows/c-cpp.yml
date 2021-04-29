@@ -5,7 +5,14 @@ on:
   #  branches: [ 21.02rc1 ]
   #pull_request:
   #  branches: [ 21.02rc1 ]
-
+  repository_dispatch:
+  workflow_dispatch:
+    inputs:
+      ssh:
+        description: 'SSH connection to Actions'
+        required: false
+        default: 'false'
+  
 env:
   FEEDS_CONF: feeds.conf.default
   DIY_P1_SH: diy-part1.sh
