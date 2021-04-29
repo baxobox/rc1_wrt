@@ -1,4 +1,4 @@
-name: C/C++ CI
+name: Build 21.02rc1 for r4s
 
 on:
   push:
