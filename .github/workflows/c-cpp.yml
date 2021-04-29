@@ -40,13 +40,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@main
         with:
-          path: 'openwrt'
+          path: 'openwrt21.02rc1-r4s'
 
       - name: Bump config
         run: |
-          tar -c -C openwrt/.github/workflows . | tar -x
+          tar -c -C openwrtv21.02rc1-r4s/.github/workflows . | tar -x
           ls ./
-          rm -rf openwrt/.github/workflows
+          rm -rf openwrtv21.02rc1-r4s/.github/workflows
       - name: Initialization environment
         env:
           DEBIAN_FRONTEND: noninteractive
