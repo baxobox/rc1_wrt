@@ -1,10 +1,10 @@
 name: Build 21.02rc1 for r4s
 
 on:
-  #push:
-  #  branches: [ 21.02rc1 ]
-  #pull_request:
-  #  branches: [ 21.02rc1 ]
+  # push:
+  #   branches: [ 21.02rc1 ]
+  # pull_request:
+  #   branches: [ 21.02rc1 ]
   repository_dispatch:
   workflow_dispatch:
     inputs:
