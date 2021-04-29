@@ -24,13 +24,11 @@ env:
   UPLOAD_WETRANSFER: false
   REPO_VERSION: 21.02rc1
   TZ: Europe/Moscow
-  TARGET_WITH_MODULES: test.config
+  TARGET_WITH_MODULES: test
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
    # steps:
    # - uses: actions/checkout@v2
    # - name: configure
@@ -41,11 +39,10 @@ jobs:
    #   run: make check
    # - name: make distcheck
    #  run: make distcheck
-   
    name: ${{ matrix.target }}
     strategy:
       matrix:
-        target: [test.comfig]
+        target: [test]
     env:
       CONFIG_FILE: "${{ matrix.target }}.config"
       FALLBACK_DEVICE_NAME: "${{ matrix.target }}"
