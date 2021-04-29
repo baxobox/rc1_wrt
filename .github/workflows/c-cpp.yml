@@ -17,7 +17,7 @@ env:
   UPLOAD_WETRANSFER: false
   REPO_VERSION: 21.02rc1
   TZ: Europe/Moscow
-  # TARGET_WITH_MODULES: x9s
+  TARGET_WITH_MODULES: test.config
 
 jobs:
   build:
@@ -35,13 +35,13 @@ jobs:
    # - name: make distcheck
    #  run: make distcheck
    
-   #name: ${{ matrix.target }}
-   # strategy:
-   #   matrix:
-   #     target: [21.02rc1]
-   # env:
-   #   CONFIG_FILE: "${{ matrix.target }}.config"
-   #   FALLBACK_DEVICE_NAME: "${{ matrix.target }}"
+   name: ${{ matrix.target }}
+    strategy:
+      matrix:
+        target: [test.comfig]
+    env:
+      CONFIG_FILE: "${{ matrix.target }}.config"
+      FALLBACK_DEVICE_NAME: "${{ matrix.target }}"
     steps:
       - name: Checkout
         uses: actions/checkout@main
