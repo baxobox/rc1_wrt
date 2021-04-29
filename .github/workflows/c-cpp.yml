@@ -122,9 +122,9 @@ jobs:
             echo "DEVICE_NAME=_${FALLBACK_DEVICE_NAME}" >> $GITHUB_ENV
           fi
           echo "FILE_DATE=_$(date +"%Y%m%d%H%M")" >> $GITHUB_ENV
-      - name: Last fail log
-        if: failure()
-        run: tail -n 200 /tmp/openwrt-build.log
+      #- name: Last fail log
+      #  if: failure()
+      #  run: tail -n 200 /tmp/openwrt-build.log
 
       - name: Show Config
         if: failure()
