@@ -69,9 +69,9 @@ jobs:
       - name: Update feeds
         run: cd openwrt && ./scripts/feeds update -a
 
-      - name: Overwrite
-        run: |
-          [ -e overwrite ] && (tar -c -C overwrite . | tar -x -C openwrt)
+      #- name: Overwrite
+      #  run: |
+      #    [ -e overwrite ] && (tar -c -C overwrite . | tar -x -C openwrt)
       - name: Update feeds index
         run: cd openwrt && ./scripts/feeds update -ai
 
