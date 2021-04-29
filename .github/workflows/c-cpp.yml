@@ -40,7 +40,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@main
         with:
-          path: 'openwrt21.02rc1-r4s'
+          path: 'openwrtv21.02rc1-r4s'
 
       - name: Bump config
         run: |
