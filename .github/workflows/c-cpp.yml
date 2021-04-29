@@ -24,7 +24,7 @@ env:
   UPLOAD_WETRANSFER: false
   REPO_VERSION: 21.02rc1
   TZ: Europe/Moscow
-  TARGET_WITH_MODULES: test
+  TARGET_WITH_MODULES: eth8168
 
 jobs:
   build:
@@ -32,7 +32,7 @@ jobs:
     name: ${{ matrix.target }}
     strategy:
       matrix:
-        target: [test]
+        target: [eth8168]
     env:
       CONFIG_FILE: "${{ matrix.target }}.config"
       FALLBACK_DEVICE_NAME: "${{ matrix.target }}"
