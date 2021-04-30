@@ -32,7 +32,7 @@ jobs:
     name: ${{ matrix.target }}
     strategy:
       matrix:
-        target: [eth8168]
+        target: [o3 eth8168]
     env:
       CONFIG_FILE: "${{ matrix.target }}.config"
       FALLBACK_DEVICE_NAME: "${{ matrix.target }}"
