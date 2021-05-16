@@ -1,7 +1,8 @@
 name: Checker by WebHook
 
-on: repository_dispatch
-
+on:
+repository_dispatch
+workflows_dispatch
 jobs:
   build:
     runs-on: ubuntu-18.04
